@@ -7,10 +7,10 @@ This script requires that fastq.gz files are arranged in the normal output/direc
 
 ### Setup
 This concatenates the fastq files into the specified output directory with a name according to the barcode number (example: BC01.fastq.gz).
-Change `${INPUT_DIR}` and `${OUTPUT_DIR}` to the actual input/output pathways.
 
 ### Run
 ```bash
+#Change "${INPUT_DIR}" and "${OUTPUT_DIR}" to the actual input/output pathways
 for barcodeDir in ${INPUT_DIR}/barcode*; do
   BC=$(echo $barcodeDir | sed "s|.*barcode|BC|")
   echo "barcode is set to: ${BC}"
